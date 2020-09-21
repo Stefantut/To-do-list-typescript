@@ -1,23 +1,18 @@
 import React from "react";
+import { TodoListItem } from "./TodoListItem";
+
+type Todo = {
+  text: string;
+  complete: boolean;
+};
+
+const todos: Array<Todo> = [
+  { text: "buy coffee", complete: true },
+  { text: "eat pizza", complete: false },
+];
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  return <TodoListItem />;
 }
 
 export default App;
