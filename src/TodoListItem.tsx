@@ -1,10 +1,7 @@
 import React from "react";
 
 interface TodoListItemProps {
-  todo: {
-    text: String;
-    complete: boolean;
-  };
+  todo: Todo;
 }
 // passed todolistiremprops as generic
 export const TodoListItem: React.FunctionComponent<TodoListItemProps> = ({
@@ -14,6 +11,7 @@ export const TodoListItem: React.FunctionComponent<TodoListItemProps> = ({
     <li>
       <label>
         <input type="checkbox" checked={todo.complete} />
+        {todo.text}
       </label>
     </li>
   );
